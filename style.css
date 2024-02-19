@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #4662f0;
+    color: white;
+}
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    margin-top: 30px; 
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 10px; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sombrero{
+    position: absolute;
+    width: 350px;
+    left: 540px;
+    border-top: solid 250px currentColor;
+    border-radius: 30% 30% 0 0;
+    color: black;
+}
+
+.sombrero2{
+    position: absolute;
+    width: 500px;
+    height: 30px;
+    top: 350px;
+    left: 465px;
+    border-bottom: solid 80px currentColor;
+    border-radius: 50%;
+    color: black;
+}
+
+.eyes {
+    width: 140px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    color: white;
+    box-shadow:
+                -90px 230px 0 0 currentColor,
+                60px 230px 0 0 currentColor;
+}
+
+.m {
+    width: 70px;
+    height: 70px;
+    color: black;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow:
+                -90px 240px 0 0 currentColor,
+                60px 240px 0 0 currentColor;
+    animation: anim 4s infinite;
+}
+
+@keyframes anim {
+    to {
+        transform: translateY(70px);
+    }
+}
+
+.mustache {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    color: black;
+    box-shadow:
+                -90px 500px 0 0 currentColor,
+                60px 500px 0 0 currentColor;
+}
+
+.mustache::before {
+    content: "";
+    position: absolute;
+    left: -210px;
+    top: 380px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate( -40deg );
+    transform-origin: right 210px;
+}
+
+.mustache::after {
+    content: "";
+    position: absolute;
+    left: 150px;
+    top: 380px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 100% 0;
+    transform: rotate( 40deg );
+    transform-origin: left 210px;
+}
+
+.mustache:before {
+    animation: animLeft 3s ease-in-out infinite;
+}
+.mustache:after {
+    animation: animRight 3s ease-in-out infinite;
+}
+
+@keyframes animLeft {
+    0% {
+        transform: rotate( -50deg );
+    }
+
+    50% {
+        transform: rotate( -30deg );
+    }
+
+    100% {
+        transform: rotate( -50deg );
+    }
+}
+
+@keyframes animRight {
+    0% {
+        transform: rotate( 50deg );
+    }
+
+    50% {
+        transform: rotate( 30deg );
+    }
+
+    100% {
+        transform: rotate( 50deg );
+    }
+}
